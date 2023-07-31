@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
-import { ChatCompletionRequestMessage } from "openai";
 
 import { Heading } from "@/components/heading";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
@@ -17,8 +16,6 @@ import { Empty } from "@/components/empty";
 import { Loader } from "@/components/loader";
 
 import { formSchema } from "./constants";
-import { cn } from "@/lib/utils";
-
 
 const MusicPage = () => {
   const router = useRouter();
