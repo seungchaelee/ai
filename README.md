@@ -1,1 +1,2 @@
-https://ai-nudge-hl69ovyha-seungchaelee.vercel.app/
+배포 사이트
+1. [AI-Nudge](https://ai-nudge.vercel.app)
