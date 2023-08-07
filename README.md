@@ -1,4 +1,4 @@
-# AI-SaaS Project
+# AI Project
 
 Next.js 13, React, Tailwind, Prisma, Stripe 프로젝트🎖
 
