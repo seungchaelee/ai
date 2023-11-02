@@ -108,7 +108,7 @@ const VideoPage = () => {
           )}
           {!video && !isLoading && (
             <div>
-              <Empty label="No music generated." />
+              <Empty label="No Video generated." />
             </div>
           )}
           {video && (
