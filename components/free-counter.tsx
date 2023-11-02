@@ -41,9 +41,16 @@ export const FreeCounter = ({
             <p>
               {apiLimitCount} / {MAX_FREE_COUNTS} Free Generations
             </p>
-            <Progress className="h-3" value={(apiLimitCount / MAX_FREE_COUNTS) * 100} />
+            <Progress
+              className="h-3"
+              value={(apiLimitCount / MAX_FREE_COUNTS) * 100}
+            />
           </div>
-          <Button onClick={proModal.onOpen} variant="premium" className="w-full">
+          <Button
+            onClick={proModal.onOpen}
+            variant="premium"
+            className="w-full"
+          >
             Upgrade
             <Zap className="w-4 h-4 ml-2 fill-white" />
           </Button>

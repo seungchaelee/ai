@@ -2,8 +2,23 @@
 
 import axios from "axios";
 import { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Check, Zap, Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  Check,
+  Zap,
+  Code,
+  ImageIcon,
+  MessageSquare,
+  Music,
+  VideoIcon,
+} from "lucide-react";
 import { useProModal } from "@/hooks/use-pro-modal";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -42,7 +57,7 @@ const tools = [
     color: "text-green-700",
     bgColor: "bg-green-700/10",
   },
-]
+];
 
 export const ProModal = () => {
   const proModal = useProModal();
@@ -75,14 +90,15 @@ export const ProModal = () => {
           </DialogTitle>
           <DialogDescription className="text-center pt-2 space-y-2 text-zinc-900 font-medium">
             {tools.map((tool) => (
-              <Card key={tool.label} className="p-3 border-black/5 flex items-center justify-between">
+              <Card
+                key={tool.label}
+                className="p-3 border-black/5 flex items-center justify-between"
+              >
                 <div className="flex items-center gap-x-4">
                   <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
                     <tool.icon className={cn("w-6 h-6", tool.color)} />
                   </div>
-                  <div className="font-semibold text-sm">
-                    {tool.label}
-                  </div>
+                  <div className="font-semibold text-sm">{tool.label}</div>
                 </div>
                 <Check className="text-primary w-5 h-5" />
               </Card>
@@ -90,7 +106,13 @@ export const ProModal = () => {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <Button disabled={loading} onClick={onSubscribe} size="lg" variant="premium" className="w-full">
+          <Button
+            disabled={loading}
+            onClick={onSubscribe}
+            size="lg"
+            variant="premium"
+            className="w-full"
+          >
             Upgrade
             <Zap className="w-4 h-4 ml-2 fill-white" />
           </Button>

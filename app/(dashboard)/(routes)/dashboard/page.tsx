@@ -1,6 +1,13 @@
 "use client";
 
-import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Code,
+  ImageIcon,
+  MessageSquare,
+  Music,
+  VideoIcon,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { Card } from "@/components/ui/card";
@@ -12,37 +19,37 @@ const tools = [
     icon: MessageSquare,
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
-    href: "/conversation"
+    href: "/conversation",
   },
   {
     label: "Music Generation",
     icon: Music,
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
-    href: "/music"
+    href: "/music",
   },
   {
     label: "Image Generation",
     icon: ImageIcon,
     color: "text-pink-700",
     bgColor: "bg-pink-700/10",
-    href: "/image"
+    href: "/image",
   },
   {
     label: "Video Generation",
     icon: VideoIcon,
     color: "text-orange-700",
     bgColor: "bg-orange-700/10",
-    href: "/video"
+    href: "/video",
   },
   {
     label: "Code Generation",
     icon: Code,
     color: "text-green-700",
     bgColor: "bg-green-700/10",
-    href: "/code"
+    href: "/code",
   },
-]
+];
 
 const DashboardPage = () => {
   const router = useRouter();
@@ -68,11 +75,9 @@ const DashboardPage = () => {
               <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
                 <tool.icon className={cn("w-8 h-8", tool.color)} />
               </div>
-              <div className="font-semibold">
-                {tool.label}
-              </div>
+              <div className="font-semibold">{tool.label}</div>
             </div>
-            <ArrowRight className="w-5 h-5"/>
+            <ArrowRight className="w-5 h-5" />
           </Card>
         ))}
       </div>

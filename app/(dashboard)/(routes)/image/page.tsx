@@ -10,7 +10,13 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { toast } from "react-hot-toast";
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Heading } from "@/components/heading";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -32,8 +38,8 @@ const ImagePage = () => {
     defaultValues: {
       prompt: "",
       amount: "1",
-      resolution: "512x512"
-    }
+      resolution: "512x512",
+    },
   });
 
   const isLoading = form.formState.isSubmitting;
@@ -42,7 +48,7 @@ const ImagePage = () => {
     try {
       setImages([]);
 
-      const response = await axios.post('/api/image', values);
+      const response = await axios.post("/api/image", values);
 
       const urls = response.data.map((image: { url: string }) => image.url);
 
@@ -120,10 +126,7 @@ const ImagePage = () => {
                       </FormControl>
                       <SelectContent>
                         {amountOptions.map((option) => (
-                          <SelectItem
-                            key={option.value}
-                            value={option.value}
-                          >
+                          <SelectItem key={option.value} value={option.value}>
                             {option.label}
                           </SelectItem>
                         ))}
@@ -150,10 +153,7 @@ const ImagePage = () => {
                       </FormControl>
                       <SelectContent>
                         {resolutionOptions.map((option) => (
-                          <SelectItem
-                            key={option.value}
-                            value={option.value}
-                          >
+                          <SelectItem key={option.value} value={option.value}>
                             {option.label}
                           </SelectItem>
                         ))}
@@ -162,7 +162,12 @@ const ImagePage = () => {
                   </FormItem>
                 )}
               />
-              <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button
+                className="col-span-12 lg:col-span-2 w-full"
+                type="submit"
+                disabled={isLoading}
+                size="icon"
+              >
                 Generate
               </Button>
             </form>
@@ -183,11 +188,7 @@ const ImagePage = () => {
             {images.map((src) => (
               <Card key={src} className="rounded-lg overflow-hidden">
                 <div className="relative aspect-square">
-                  <Image
-                    fill
-                    alt="Image"
-                    src={src}
-                  />
+                  <Image fill alt="Image" src={src} />
                 </div>
                 <CardFooter className="p-2">
                   <Button

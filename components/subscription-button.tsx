@@ -9,10 +9,10 @@ import { toast } from "react-hot-toast";
 
 interface SubscriptionButtonProps {
   isPro: boolean;
-};
+}
 
 export const SubscriptionButton = ({
-  isPro = false
+  isPro = false,
 }: SubscriptionButtonProps) => {
   const [loading, setLoading] = useState(false);
 
@@ -31,7 +31,11 @@ export const SubscriptionButton = ({
   };
 
   return (
-    <Button variant={isPro ? "default" : "premium"} disabled={loading} onClick={onClick}>
+    <Button
+      variant={isPro ? "default" : "premium"}
+      disabled={loading}
+      onClick={onClick}
+    >
       {isPro ? "Manage Subscription" : "Upgrade"}
       {!isPro && <Zap className="w-4 h-4 ml-2 fill-white" />}
     </Button>

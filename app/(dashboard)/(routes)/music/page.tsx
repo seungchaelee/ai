@@ -27,8 +27,8 @@ const MusicPage = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      prompt: ""
-    }
+      prompt: "",
+    },
   });
 
   const isLoading = form.formState.isSubmitting;
@@ -37,7 +37,7 @@ const MusicPage = () => {
     try {
       setMusic(undefined);
 
-      const response = await axios.post('/api/music', values);
+      const response = await axios.post("/api/music", values);
 
       setMusic(response.data.audio);
       form.reset();
@@ -94,7 +94,12 @@ const MusicPage = () => {
                   </FormItem>
                 )}
               />
-              <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button
+                className="col-span-12 lg:col-span-2 w-full"
+                type="submit"
+                disabled={isLoading}
+                size="icon"
+              >
                 Generate
               </Button>
             </form>

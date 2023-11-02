@@ -27,8 +27,8 @@ const VideoPage = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      prompt: ""
-    }
+      prompt: "",
+    },
   });
 
   const isLoading = form.formState.isSubmitting;
@@ -37,7 +37,7 @@ const VideoPage = () => {
     try {
       setVideo(undefined);
 
-      const response = await axios.post('/api/video', values);
+      const response = await axios.post("/api/video", values);
 
       setVideo(response.data[0]);
       form.reset();
@@ -94,7 +94,12 @@ const VideoPage = () => {
                   </FormItem>
                 )}
               />
-              <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button
+                className="col-span-12 lg:col-span-2 w-full"
+                type="submit"
+                disabled={isLoading}
+                size="icon"
+              >
                 Generate
               </Button>
             </form>
@@ -112,7 +117,10 @@ const VideoPage = () => {
             </div>
           )}
           {video && (
-            <video controls className="w-full aspect-video mt-8 rounded-lg border bg-black">
+            <video
+              controls
+              className="w-full aspect-video mt-8 rounded-lg border bg-black"
+            >
               <source src={video} />
             </video>
           )}
