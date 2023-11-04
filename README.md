@@ -24,5 +24,21 @@
 
 - 다양한 콘텐츠 추가 예정( Redesign rooms in seconds using AI, Sketch to art )
 
+## Setup (사전 설치)
+
+Install dependencies
+
+```sh
+npm install
+```
+
+## Development (작업 방법)
+
+```sh
+Next.js 시작하기
+npm run dev
+# Visit http://localhost:3000 from your browser (Chrome)
+```
+
 ## 배포 사이트
 1. [AI-Nudge](https://ai-nudge.vercel.app)
