@@ -1,11 +1,11 @@
 # AI Chat-Bot
 
+- **반드시 아래 Setup과 Development 부분을 읽어보세요.**
+- 문의는 id4720@gmail.com
+
 ## 서비스 설명
 - AI를 이용하여 사용자에게 즉각적인 답변을 주고 창의적인 영감을 제공하는 서비스입니다.
 - OpenAI 및 Replicate의 API를 활용하여 AI 모델을 구축하고 사용자의 질문에 대한 자동 응답 및 창의적인 아이디어를 생성하는 시스템을 개발하였습니다.
-
-- **반드시 아래 Setup과 Development 부분을 읽어보세요.**
-- 문의는 id4720@gmail.com
 
 - **사용자의 편의성을 위한 UI/UX 및 접근성**
     - 웹페이지에 동적인 text를 표현하고 싶어 함수를 작성하였으나 현재와 같은 동적 표현이 아니라 typewriter-effectr를 활용하여 해결
