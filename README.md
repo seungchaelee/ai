@@ -20,7 +20,7 @@
   - Stripe monthly subscription 구독 서비스 적용
   - Free tier with API limiting
 
-### 🧭 Will Update!
+## 🧭 Will Update!
 
 - 다양한 콘텐츠 추가 예정( Redesign rooms in seconds using AI, Sketch to art )
 
